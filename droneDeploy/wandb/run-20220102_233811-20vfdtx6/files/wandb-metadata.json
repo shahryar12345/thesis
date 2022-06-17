@@ -1,0 +1,16 @@
+{
+    "os": "Windows-10-10.0.17134-SP0",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-01-02T18:38:16.185181",
+    "startedAt": "2022-01-02T18:38:11.294898",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "G:\\thesis\\aerial-imagery-segmentation-master\\aerial-imagery-segmentation-master\\dd-ml-segmentation-benchmark\\main_fastai.py",
+    "codePath": "main_fastai.py",
+    "host": "Shahri",
+    "username": "Shahyar",
+    "executable": "C:\\ProgramData\\Anaconda3\\envs\\fastai_gpu\\python.exe"
+}

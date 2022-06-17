@@ -1,0 +1,12 @@
+ELSE
+zipfile "dataset-sample.tar.gz" already exists, remove it if you want to re-download.
+extracting "dataset-sample.tar.gz"
+creating chips
+Traceback (most recent call last):
+  File "G:\thesis\aerial-imagery-segmentation-master\aerial-imagery-segmentation-master\dd-ml-segmentation-benchmark\main_fastai.py", line 23, in <module>
+    datasets.download_dataset(dataset)
+  File "G:\thesis\aerial-imagery-segmentation-master\aerial-imagery-segmentation-master\dd-ml-segmentation-benchmark\libs\datasets.py", line 42, in download_dataset
+    libs.images2chips.run(dataset)
+  File "G:\thesis\aerial-imagery-segmentation-master\aerial-imagery-segmentation-master\dd-ml-segmentation-benchmark\libs\images2chips.py", line 78, in run
+    open(prefix + '/train.txt', mode='w').close()
+FileNotFoundError: [Errno 2] No such file or directory: 'dataset-sample/train.txt'

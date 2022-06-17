@@ -1,0 +1,5 @@
+zipfile "dataset-sample.tar.gz" already exists, remove it if you want to re-download.
+folder "dataset-sample" already exists, remove it if you want to re-create.
+chip folders "dataset-sample/image-chips" and "dataset-sample/label-chips" already exist, remove them to recreate chips.
+epoch     train_loss  valid_loss  precision  recall    f_beta    time
+

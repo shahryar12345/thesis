@@ -1,0 +1,238 @@
+zipfile "dataset-sample.tar.gz" already exists, remove it if you want to re-download.
+folder "dataset-sample" already exists, remove it if you want to re-create.
+chip folders "dataset-sample/image-chips" and "dataset-sample/label-chips" already exist, remove them to recreate chips.
+C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\data_block.py:246: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if isinstance(self.items[0], Path): return self.split_by_valid_func(lambda o: o.name in valid_names)
+C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\data_block.py:460: UserWarning: Your validation set is empty. If this is by design, use `split_none()`
+                 or pass `ignore_empty=True` when labelling to remove this warning.
+  warn("""Your validation set is empty. If this is by design, use `split_none()`
+Downloading: "https://download.pytorch.org/models/resnet50-0676ba61.pth" to C:\Users\Shahyar/.cache\torch\hub\checkpoints\resnet50-0676ba61.pth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 97.8M/97.8M [07:24<00:00, 231kB/s]
+Traceback (most recent call last):
+  File "G:\thesis\aerial-imagery-segmentation-master\aerial-imagery-segmentation-master\dd-ml-segmentation-benchmark\main_fastai.py", line 26, in <module>
+    training.train_model(dataset)
+  File "G:\thesis\aerial-imagery-segmentation-master\aerial-imagery-segmentation-master\dd-ml-segmentation-benchmark\libs\training.py", line 51, in train_model
+    WandbCallback(learn, log=None, input_type="images"),
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\wandb\integration\fastai\__init__.py", line 110, in __init__
+    self.validation_data = [learn.data.valid_ds[i] for i in indices]
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\wandb\integration\fastai\__init__.py", line 110, in <listcomp>
+    self.validation_data = [learn.data.valid_ds[i] for i in indices]
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\data_block.py", line 655, in __getitem__
+    if self.item is None: x,y = self.x[idxs],self.y[idxs]
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\data_block.py", line 120, in __getitem__
+    if isinstance(idxs, Integral): return self.get(idxs)
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\vision\data.py", line 270, in get
+    fn = super().get(i)
+  File "C:\ProgramData\Anaconda3\envs\fastai_gpu\lib\site-packages\fastai\data_block.py", line 75, in get
+    return self.items[i]
+IndexError: index 0 is out of bounds for axis 0 with size 0

@@ -1,0 +1,33 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.9
+    framework: fastai
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.7
+    start_time: 1641393876
+    t:
+      1:
+      - 1
+      - 4
+      - 5
+      2:
+      - 1
+      - 4
+      - 5
+      3:
+      - 16
+      4: 3.9.7
+      5: 0.12.9
+      8:
+      - 3
+      - 5
+dataset:
+  desc: null
+  value: dataset-medium
+name:
+  desc: null
+  value: baseline-fastai
