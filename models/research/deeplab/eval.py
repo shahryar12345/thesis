@@ -86,6 +86,8 @@ flags.DEFINE_integer('max_number_of_evaluations', 0,
                      'Maximum number of eval iterations. Will loop '
                      'indefinitely upon nonpositive values.')
 
+flags.DEFINE_string('lable_output', "" ,  'Where the output lables reside.')
+
 
 def main(unused_argv):
   tf.logging.set_verbosity(tf.logging.INFO)
@@ -147,6 +149,21 @@ def main(unused_argv):
     # are not evaluated since the corresponding regions contain weights = 0.
     labels = tf.where(
         tf.equal(labels, dataset.ignore_label), tf.zeros_like(labels), labels)
+
+    psudo_label_dir = './DD_full/SegmentationClassSelf/'
+
+    if not os.path.isdir(psudo_label_dir):
+      print("creating folder: ",psudo_label_dir)
+      os.mkdir(psudo_label_dir)
+    else:
+      print("Folder already exists. Delete the folder and re-run the code!!!")
+
+    for l_f in tqdm(labels):
+      arr = np.array(Image.open(l_f)
+      arr2d = arr[:,:,0]
+      Image.fromarray(arr2d).save(psudo_label_dir , l_f)
+
+
 
     predictions_tag = 'miou'
     for eval_scale in FLAGS.eval_scales:

@@ -8,6 +8,7 @@ INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/${EXP_FOLDER}/init_models"
 TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/${EXP_FOLDER}/train"
 EVAL_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/${EXP_FOLDER}/eval"
 DATASET="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/tfrecord"
+LABLE_OUTPUT="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/SegmentationClassSelf"
 
 python3 "${WORK_DIR}"/eval.py \
 --logtostderr \
@@ -22,4 +23,5 @@ python3 "${WORK_DIR}"/eval.py \
 --checkpoint_dir="${TRAIN_LOGDIR}" \
 --eval_logdir="${EVAL_LOGDIR}" \
 --dataset_dir="${DATASET}" \
---max_number_of_evaluations=1
+--max_number_of_evaluations=1\
+--lable_output="${LABLE_OUTPUT}"

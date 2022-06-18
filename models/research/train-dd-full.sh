@@ -9,6 +9,7 @@ EXP_FOLDER="exp/train_on_trainval_set"
 INIT_FOLDER="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/${EXP_FOLDER}/init_models"
 TRAIN_LOGDIR="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/${EXP_FOLDER}/train"
 DATASET="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/tfrecord"
+LABLE_OUTPUT="${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/SegmentationClassSelf"
 
 mkdir -p "${WORK_DIR}/${DATASET_DIR}/${DD_FOLDER}/exp"
 mkdir -p "${TRAIN_LOGDIR}"
@@ -30,3 +31,4 @@ python3 "${WORK_DIR}"/train.py \
   --tf_initial_checkpoint="${INIT_FOLDER}/deeplabv3_pascal_train_aug/model.ckpt" \
   --train_logdir="${TRAIN_LOGDIR}" \
   --dataset_dir="${DATASET}"
+  --lable_output="${LABLE_OUTPUT}"

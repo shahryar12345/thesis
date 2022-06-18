@@ -133,7 +133,7 @@ def _bytes_list_feature(values):
       bytes_list=tf.train.BytesList(value=[norm2bytes(values)]))
 
 
-def image_seg_to_tfexample(image_data, filename, height, width, seg_data):
+def image_seg_to_tfexample(image_data, filename, height, width, seg_data , psudo_seg_data):
   """Converts one image/segmentation pair to tf example.
 
   Args:
@@ -156,6 +156,8 @@ def image_seg_to_tfexample(image_data, filename, height, width, seg_data):
       'image/channels': _int64_list_feature(3),
       'image/segmentation/class/encoded': (
           _bytes_list_feature(seg_data)),
+      'image/segmentation_self/class/encoded': (
+          _bytes_list_feature(psudo_seg_data)),
       'image/segmentation/class/format': _bytes_list_feature(
           FLAGS.label_format),
   }))
